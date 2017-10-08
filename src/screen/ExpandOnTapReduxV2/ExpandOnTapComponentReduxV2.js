@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { connect } from 'react-redux';
-import { expandOnTap } from '../../actions';
+//import { expandOnTap } from '../../actions';
 import {
     Button,
     Card,
@@ -64,4 +64,6 @@ const mapStateToProps = ({expandOnTap}) => {
     return { title, message, isClosed };
 };
 
-export default connect(mapStateToProps, { expandOnTap })(ExpandOnTapComponentReduxV2);
+export default connect(mapStateToProps, {
+//    expandOnTap
+})(ExpandOnTapComponentReduxV2);
