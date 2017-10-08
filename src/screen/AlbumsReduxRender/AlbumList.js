@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, ActivityIndicator } from 'react-native';
 import AlbumDetail from './AlbumDetail';
 import { getData } from './Action';
 import { connect } from 'react-redux';
@@ -25,6 +25,19 @@ class AlbumList extends Component {
         //recursion problem
         //this.props.getData();
         console.log("AlbumList-render", this.props);
+    
+        console.log("AlbumList-render this.props.animating : ", this.props.animating);
+        
+        const isAnimating = this.props.animating;
+        console.log("AlbumList-render isAnimating : ", isAnimating)
+        
+        if (isAnimating) {
+            return (<ActivityIndicator
+                animating={isAnimating}
+                color="#0000ff"
+                size="large"
+            />)
+        }
         
         return (
             <ScrollView>
@@ -34,11 +47,15 @@ class AlbumList extends Component {
     }
 }
 
-const mapStateToProps = ({ albums }) => {
+const mapStateToProps = ({ albums, ownProps }) => {
     //const {albums} = albums;
-    console.log("AlbumList-mapStateToProps albums:", albums)
+    console.log("AlbumList-mapStateToProps albums :", albums)
+    console.log("AlbumList-mapStateToProps albums.length :", albums.length)
     
-    return {albums};
+    const animating = albums.length == 0;
+    console.log("AlbumList-mapStateToProps animating :", animating)
+    
+    return { albums, animating: animating };
 };
 
 export default connect(mapStateToProps, {

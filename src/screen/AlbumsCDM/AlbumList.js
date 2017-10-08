@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, ActivityIndicator } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component {
-  state = { albums: [] };
+  state = { albums: [], animating:true };
     
     static navigationOptions = {
         title: 'AlbumList-componentDidMount',
@@ -12,7 +12,7 @@ class AlbumList extends Component {
   
   componentDidMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-      .then(response => this.setState({ albums: response.data }));
+      .then(response => this.setState({ albums: response.data, animating: false }));
   }
 
   renderAlbums() {
@@ -23,7 +23,14 @@ class AlbumList extends Component {
 
   render() {
     console.log(this.state);
-
+    
+    if (this.state.animating) {
+        return (<ActivityIndicator
+            animating={this.state.animating}
+            color="#0000ff"
+            size="large"
+        />)
+    }
     return (
       <ScrollView>
         {this.renderAlbums()}
