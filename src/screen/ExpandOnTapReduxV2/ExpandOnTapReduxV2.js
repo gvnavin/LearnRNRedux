@@ -9,14 +9,8 @@ import { connect } from 'react-redux';
 class ExpandOnTapReduxV2 extends Component {
     
     static navigationOptions = {
-        title: 'ExpandOnTapRedux',
+        title: 'ExpandOnTapRedux-V2',
     };
-    
-    state = { index: -1 };
-    
-    onButtonPress(inpIndex) {
-        this.setState({ index: inpIndex });
-    }
     
     render() {
         return (

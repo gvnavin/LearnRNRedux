@@ -5,7 +5,7 @@ import {
     CardSection
 } from '../components/common';
 
-import { Alert, } from 'react-native';
+import { ScrollView } from 'react-native';
 
 class MainScreen extends Component {
     
@@ -14,47 +14,77 @@ class MainScreen extends Component {
     };
     
     render() {
-    
+        
         const { navigate } = this.props.navigation;
         
         return (
-            <Card>
+            <ScrollView>
                 <Card>
-                    <CardSection>
-                        <Button onPress={() => navigate('ButtonAlert')}>
-                            ButtonAlert
-                        </Button>
-                    </CardSection>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('ButtonAlert')}>
+                                ButtonAlert
+                            </Button>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('ExpandOnTap')}>
+                                ExpandOnTap
+                            </Button>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('ExpandOnTapReduxV1')}>
+                                ExpandOnTapReduxV1
+                            </Button>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('QuestionRedux')}>
+                                QuestionRedux
+                            </Button>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('QuestionReduxV2')}>
+                                QuestionReduxV2
+                            </Button>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('AlbumsReduxRender')}>
+                                AlbumsReduxRender
+                            </Button>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('AlbumsCDM')}>
+                                Albums Component Did Mount
+                            </Button>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('AlbumsCDM')}>
+                                Albums Component Will Mount
+                            </Button>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <CardSection>
+                            <Button onPress={() => navigate('AlbumsRender')}>
+                                Albums Render
+                            </Button>
+                        </CardSection>
+                    </Card>
                 </Card>
-                <Card>
-                    <CardSection>
-                        <Button onPress={() => navigate('ExpandOnTap')}>
-                            ExpandOnTap
-                        </Button>
-                    </CardSection>
-                </Card>
-                <Card>
-                    <CardSection>
-                        <Button onPress={() => navigate('ExpandOnTapReduxV1')}>
-                            ExpandOnTapReduxV1
-                        </Button>
-                    </CardSection>
-                </Card>
-                <Card>
-                    <CardSection>
-                        <Button onPress={() => navigate('Question')}>
-                            Question
-                        </Button>
-                    </CardSection>
-                </Card>
-                <Card>
-                    <CardSection>
-                        <Button onPress={() => navigate('QuestionV2')}>
-                            QuestionV2
-                        </Button>
-                    </CardSection>
-                </Card>
-            </Card>
+            </ScrollView>
         );
     }
 }

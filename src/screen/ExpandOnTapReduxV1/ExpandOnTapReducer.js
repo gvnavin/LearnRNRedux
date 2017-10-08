@@ -1,6 +1,6 @@
 import {
     EXPAND_ON_TAP,
-} from '../actions/types';
+} from './types';
 
 const INITIAL_STATE = {
     title: 'physics-redux-init-title',

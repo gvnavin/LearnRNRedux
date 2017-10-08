@@ -3,7 +3,7 @@ import {
     Button,
     Card,
     CardSection
-} from '../components/common';
+} from '../../components/common/index';
 import { Text } from 'react-native';
 
 class ExpandOnTapComponent extends Component {

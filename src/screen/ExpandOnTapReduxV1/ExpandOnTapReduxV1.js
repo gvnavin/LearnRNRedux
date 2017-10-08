@@ -6,18 +6,12 @@ import {
 import ExpandOnTapComponentReduxV1 from './ExpandOnTapComponentReduxV1'
 import { connect } from 'react-redux';
 
-class ExpandOnTapRedux extends Component {
+class ExpandOnTapReduxV1 extends Component {
     
     static navigationOptions = {
-        title: 'ExpandOnTapRedux',
+        title: 'ExpandOnTapRedux-V1',
     };
-    
-    state = { index: -1 };
-    
-    onButtonPress(inpIndex) {
-        this.setState({ index: inpIndex });
-    }
-    
+
     render() {
         return (
             <Card>
@@ -33,4 +27,4 @@ const mapStateToProps = state => {
     return {}
 };
 
-export default connect(mapStateToProps)(ExpandOnTapRedux);
+export default connect(mapStateToProps)(ExpandOnTapReduxV1);

@@ -15,7 +15,7 @@ import Progress from './Progress';
 class Question extends Component {
     
     static navigationOptions = {
-        title: 'Question',
+        title: 'Question-Redux',
     };
     
     onPreviousQuestion() {

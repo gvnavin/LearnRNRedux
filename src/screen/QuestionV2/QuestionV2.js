@@ -15,7 +15,7 @@ import ProgressV2 from './ProgressV2';
 class QuestionV2 extends Component {
     
     static navigationOptions = {
-        title: 'QuestionV2',
+        title: 'QuestionV2-Redux',
     };
     
     onPreviousQuestion() {

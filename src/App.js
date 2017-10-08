@@ -14,11 +14,15 @@ import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import MainScreen from './screen/MainScreen';
 import ButtonAlert from './screen/ButtonAlert';
-import ExpandOnTap from './screen/ExpandOnTap';
+import ExpandOnTap from './screen/ExpandOnTap/ExpandOnTap';
 import ExpandOnTapReduxV1 from './screen/ExpandOnTapReduxV1/ExpandOnTapReduxV1';
 import ExpandOnTapReduxV2 from './screen/ExpandOnTapReduxV2/ExpandOnTapReduxV2';
-import Question from './screen/Question/Question'
-import QuestionV2 from './screen/QuestionV2/QuestionV2'
+import QuestionRedux from './screen/Question/Question'
+import QuestionReduxV2 from './screen/QuestionV2/QuestionV2'
+import AlbumsReduxRender from './screen/AlbumsReduxRender/AlbumList'
+import AlbumsCDM from './screen/AlbumsCDM/AlbumList'
+import AlbumsCWM from './screen/AlbumsCWM/AlbumList'
+import AlbumsRender from './screen/AlbumsRender/AlbumList'
 
 import {
     StackNavigator,
@@ -30,8 +34,13 @@ const StackNavigationScreens = StackNavigator({
     ExpandOnTap: {screen: ExpandOnTap},
     ExpandOnTapReduxV1: {screen: ExpandOnTapReduxV1},
     ExpandOnTapReduxV2: {screen: ExpandOnTapReduxV2},
-    Question: {screen: Question},
-    QuestionV2: {screen: QuestionV2}
+    QuestionRedux: {screen: QuestionRedux},
+    QuestionReduxV2: {screen: QuestionReduxV2},
+    AlbumsReduxRender: {screen: AlbumsReduxRender},
+    AlbumsCDM: {screen: AlbumsCDM},
+    AlbumsCWM: {screen: AlbumsCWM},
+    AlbumsRender: {screen: AlbumsRender},
+    
 });
 
 class App extends Component {
@@ -41,7 +50,7 @@ class App extends Component {
         
         return (
             <Provider store={store}>
-              < StackNavigationScreens />
+              <StackNavigationScreens />
             </Provider>
         );
     }

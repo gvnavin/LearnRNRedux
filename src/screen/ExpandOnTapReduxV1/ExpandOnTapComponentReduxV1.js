@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { connect } from 'react-redux';
-import { expandOnTap } from '../../actions';
+import { expandOnTap } from './ExpandOnTapAction';
 import {
     Button,
     Card,

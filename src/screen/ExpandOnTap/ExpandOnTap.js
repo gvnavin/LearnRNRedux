@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
     Card,
     CardSection,
-} from '../components/common';
+} from '../../components/common/index';
 
 import {
     ExpandOnTapComponent
