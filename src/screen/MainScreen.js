@@ -29,14 +29,14 @@ class MainScreen extends Component {
                     </Card>
                     <Card>
                         <CardSection>
-                            <Button onPress={() => navigate('ExpandOnTap')}>
+                            <Button onPress={() => navigate('ExpandOnTap', { data: 'test-data' })}>
                                 ExpandOnTap
                             </Button>
                         </CardSection>
                     </Card>
                     <Card>
                         <CardSection>
-                            <Button onPress={() => navigate('ExpandOnTapReduxV1')}>
+                            <Button onPress={() => navigate('ExpandOnTapReduxV1', { data: 'test-data' })}>
                                 ExpandOnTapReduxV1
                             </Button>
                         </CardSection>

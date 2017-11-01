@@ -22,6 +22,11 @@ class ExpandOnTap extends Component {
     }
     
     render() {
+    
+        const { params } = this.props.navigation.state;
+    
+        console.log(params.data)
+    
         return (
             <Card>
                 <ExpandOnTapComponent title={"Physics"} message={"Physics message"}/>
